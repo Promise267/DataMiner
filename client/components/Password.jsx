@@ -1,14 +1,13 @@
-'use client'
-import React, { useState } from 'react'
+import React, from 'react'
 
-export default function Password({placeholder}) {
-    const [password, setPassword] = useState('')
+export default function Password({placeholder, password, setPassword}) {
     return (
         <>
             <div>
                 <input 
                     type='password'
                     name='password'
+                    value={password}
                     className='shadow-lg px-4 py-3 outline-none rounded-lg'
                     onChange={(e) => {setPassword(e.target.value)}}
                     placeholder={placeholder}
